@@ -34,6 +34,10 @@ class ScrapeCommand
         foreach ($products as $product) {
             // NB: This I/O can be made non-blocking in PHP, but no need to do so here
             $html = $retriever->retrieveHtml($product->link);
+
+            // Here I'm just taking the HTML size to mean the length of the html string in Kb
+            // mb_strln with encoding set to '8bit' gives the byte length back as an integer
+            $product->size = sprintf("%0.1fKb", mb_strlen($html, '8bit') / 1024);
             try {
                 $xpath = $this->createDOMXPathObjectFromHtml($html);
             } catch(RuntimeException $e) {
