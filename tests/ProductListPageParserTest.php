@@ -28,7 +28,6 @@ class ProductListPageParserTest extends PHPUnit_Framework_TestCase
     {
         $p = new ProductListPageParser($this->product_list_document_xpath);
         $products = $p->getProducts();
-        var_dump(json_encode($p->getProducts(), JSON_PRETTY_PRINT));
         $this->assertEquals(12, count($products));
     }
 
