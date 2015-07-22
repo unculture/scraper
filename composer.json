@@ -1,0 +1,26 @@
+{
+    "name": "unculture/scraper",
+    "description": "A simple scraper for a specific task",
+    "require": {
+        "php": ">=5.4",
+        "guzzle/guzzle": "^3.9",
+        "nategood/commando": "^0.2.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7.7",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unculture\\Scraper\\": "src"
+        }
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "James Browne",
+            "email": "jb@jamesbrowne.me"
+        }
+    ],
+    "minimum-stability": "stable"
+}
