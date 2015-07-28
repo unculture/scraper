@@ -12,14 +12,14 @@ composer install
 
 ##Usage
 ```
-php scraper.py
+php scrape.php
 ```
 
 ##Help
 To display the help text and list any options / flags:
 
 ```
-php scraper.py --help
+php scrape.php --help
 ```
 
 ##Tests
