@@ -52,17 +52,4 @@ class ProductListPageParser
         return $products;
 
     }
-
-    /**
-     * @param $products
-     * @return int
-     */
-    public function calculateGrandTotal($products)
-    {
-        $total = 0;
-        foreach($products as $product) {
-            $total += $product->unit_price;
-        }
-        return $total;
-    }
 }
